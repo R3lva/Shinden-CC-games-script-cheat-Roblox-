@@ -1,0 +1,33 @@
+
+---- SOLO FUNCIONARA 1 VEZ ESTE SCRIPT YA QUE ABUSA DE UNA VULNERABILIDAD// SOLO PUEDES GIVEARTE 1 TOOL CON ESTE SCRIPT -----
+-- RECOMIENDO: "Gate of View" o "oi gano el gaming" --- Para insta shot o Wipe
+
+--- Creo que las gates tienen CD desde que entras y bastante o CD global ya que tarda
+
+local Colora = Color3.fromRGB(255, 0, 0)
+
+local habilidad = "Gate of View" -- Cambia esto por la hab que quieras tener(La 8ctava usa Gate of View al igual que la 7tima)
+
+-- Te da un scroll 
+game.ReplicatedStorage.Events.Scrolls.UseScroll:FireServer(habilidad, Colora) 
+
+-- Skippea el Use del scroll
+game.ReplicatedStorage.Events.Scrolls.OptionClicked:FireServer("Use")
+
+
+
+-------------------------///PARTE 2 --------------
+
+local gate = "Gate8" -- Cambia esto por la puerta que quieras activar
+
+function sinYield() -- Activa Octava
+    
+-- Es una espera
+    task.delay(2, function()
+        print("espera")
+game.ReplicatedStorage.Remotes.ActivateGate:FireServer(gate) 
+    end)
+end
+
+
+sinYield()
